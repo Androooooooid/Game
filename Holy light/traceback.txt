@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 51, in script
+    bea "Хэ. Хэ-хэ. Ах-хэ-хэ-хэ."
+Exception: Unknown keyword arguments: side_image
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 51, in script
+    bea "Хэ. Хэ-хэ. Ах-хэ-хэ-хэ."
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ast.py", line 706, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\exports.py", line 1336, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\character.py", line 1139, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\character.py", line 552, in display_say
+    what_text = renpy.display.screen.get_widget(what_text[0], what_text[1], what_text[2])
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\screen.py", line 1284, in get_widget
+    screen.update()
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\screen.py", line 625, in update
+    self.screen.function(**self.scope)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ast.py", line 158, in apply_arguments
+    return parameters.apply(args, kwargs, ignore_errors)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ast.py", line 145, in apply
+    raise Exception("Unknown keyword arguments: %s" % ( ", ".join(values.keys())))
+Exception: Unknown keyword arguments: side_image
+
+Windows-7-6.1.7601-SP1
+Ren'Py 7.3.2.320
+Holy light 1.0
+Mon Aug 19 16:01:34 2019
