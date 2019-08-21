@@ -2,8 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 6: is not terminated with a newline. (Check strings and parenthesis.)
-    define j = Character("Джайна", color="#b1bab1", window_left_padding=160, window_background="do.png",  
+File "game/script.rpy", line 35: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.3.2.320
-Mon Aug 19 16:11:20 2019
+Wed Aug 21 14:37:39 2019

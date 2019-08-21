@@ -1,20 +1,39 @@
-Mon Aug 19 16:11:20 2019
+Wed Aug 21 14:38:29 2019
 Windows-7-6.1.7601-SP1
 Ren'Py 7.3.2.320
  
 
 Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.01s
+Loader init took 0.04s
 Loading error handling took 0.02s
-Loading script took 0.07s
+Loading script took 0.12s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
-
-File "game/script.rpy", line 6: is not terminated with a newline. (Check strings and parenthesis.)
-    define j = Character("ÐÐ¶Ð°Ð¹Ð½Ð°", color="#b1bab1", window_left_padding=160, window_background="do.png",  
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kytumov\\AppData\\Roaming/RenPy/backups\\Holy light':
+Dump and make backups. took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Interface start took 0.09s
+Creating interface object took 0.04s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.05s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.02s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
@@ -341,4 +360,18 @@ Texture testing:
 - 2048px textures work.
 FBO Maximum Texture Size: 16384
 Root FBO is: 0
-Total time until interface ready: 0.598999977112s
+Total time until interface ready: 0.963000059128s
+- Target is 5 frames in 0.333333333333 seconds.
+- Frame drawn at 0.000000 seconds.
+- Frame drawn at 0.020667 seconds.
+- Frame drawn at 0.021667 seconds.
+- Frame drawn at 0.023667 seconds.
+- Frame drawn at 0.041667 seconds.
+- 0.041667 seconds to render 5 frames.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.02s
+Load screen analysis took 0.07s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
