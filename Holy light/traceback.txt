@@ -1,36 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 51, in script
-    bea "Хэ. Хэ-хэ. Ах-хэ-хэ-хэ."
-Exception: Unknown keyword arguments: side_image
+While loading <'Image' u'find mapdalaran.jpg'>:
+  File "game/script.rpy", line 39, in script
+    $ result = renpy.imagemap("find mapdalaran.jpg", "find mapdalaranwithlabel.jpg", [
+  File "game/script.rpy", line 52, in <module>
+    (66, 116, 738, 126, "volga")
+IOError: Couldn't find file 'find mapdalaran.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 51, in script
-    bea "Хэ. Хэ-хэ. Ах-хэ-хэ-хэ."
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ast.py", line 706, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\exports.py", line 1336, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\character.py", line 1139, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\character.py", line 842, in do_display
-    **display_args)
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\character.py", line 552, in display_say
-    what_text = renpy.display.screen.get_widget(what_text[0], what_text[1], what_text[2])
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\screen.py", line 1284, in get_widget
-    screen.update()
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ast.py", line 158, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ast.py", line 145, in apply
-    raise Exception("Unknown keyword arguments: %s" % ( ", ".join(values.keys())))
-Exception: Unknown keyword arguments: side_image
+  File "game/script.rpy", line 39, in script
+    $ result = renpy.imagemap("find mapdalaran.jpg", "find mapdalaranwithlabel.jpg", [
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ast.py", line 912, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\python.py", line 2004, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 52, in <module>
+    (66, 116, 738, 126, "volga")
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\exports.py", line 1391, in imagemap
+    roll_forward=roll_forward)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\ui.py", line 295, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\core.py", line 2699, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\core.py", line 3191, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\core.py", line 2091, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 546, in renpy.display.render.render_screen
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 154, in renpy.display.render.render
+  File "render.pyx", line 247, in renpy.display.render.render
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\im.py", line 584, in render
+    return cache.get(self, render=True)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\im.py", line 266, in get
+    surf = image.load()
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\display\im.py", line 629, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "C:\Users\Kytumov\Downloads\7.3.2-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'find mapdalaran.jpg'.
 
 Windows-7-6.1.7601-SP1
 Ren'Py 7.3.2.320
 Holy light 1.0
-Mon Aug 19 16:01:34 2019
+Tue Aug 27 13:35:30 2019
